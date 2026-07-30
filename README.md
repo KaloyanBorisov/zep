@@ -43,6 +43,51 @@ documentation at [help.getzep.com](https://help.getzep.com). Zep's official SDKs
 | [`zep-eval-harness/`](zep-eval-harness/) | Evaluation harness for ingestion and retrieval |
 | [`legacy/`](legacy/) | Deprecated Zep Community Edition (unsupported) |
 
+## Python Examples (`examples/python`)
+
+Reference implementations demonstrating Zep's memory features from an application-usage perspective:
+
+- **`simple.py`** — A shoe-shopping support bot showing a customer's brand preference change
+  over time (Adidas → Puma), illustrating that memory updates as preferences evolve rather than
+  staying stuck on the first thing said.
+- **`advanced.py`** — A travel-planning assistant across four real-world trip scenarios (a
+  culinary trip with a spouse, an adventure trip with a friend, a business trip with a
+  colleague, a multi-generational family reunion), tracking who's who, individual preferences,
+  and bookings — including a customer whose food preferences later reverse.
+- **`user_example.py`** — Basic account administration: creating, updating, and removing
+  customer profiles.
+- **`chat_history/`** — Replays a scripted customer-support conversation (shoe shopping with
+  sizing/budget/pronation details) and summarizes the customer's needs from it.
+- **`graph_example/`** — Five demos showing free-form info (chat messages, JSON records, notes)
+  organized into a queryable knowledge graph: a business/leisure travel tracker, a concert
+  ticket-sales bot (searches, purchases, waitlists), and a general "ask the memory about X" tour.
+- **`quickstart/quickstart.ipynb`** — Flagship demo: a support bot automatically pulls in a
+  customer's billing/account history from unrelated past sessions when she reports a new issue,
+  without her needing to re-explain anything.
+- **`autogen-agent/agent.ipynb`** — A mental-health check-in bot that remembers emotionally
+  significant details from past sessions (rated by significance, not just recency) and raises
+  them naturally when the user returns.
+- **`langgraph-agent/agent.ipynb`** — A supportive counselor bot that stays grounded across a
+  long conversation, correctly recalling earlier topics (a stressful work situation, a sick pet)
+  even after the conversation has moved on.
+- **`zep-quickstart-dashboard/`** — An interactive real-estate assistant dashboard comparing
+  responses with vs. without memory, side by side, with latency stats.
+- **`context-templates-example/`** — Same real-estate assistant, showing how the shape/format of
+  the memory summary shown to the assistant can be customized.
+- **`user-summary-instructions-example/`** — Same real-estate assistant, showing "standing
+  questions" (budget, bedrooms, must-haves) that stay answered even if mentioned only once.
+- **`agent-memory-full-example/`** — A fuller, ready-to-run chatbot template with sample
+  pre-loaded conversation data.
+- **`chunking-example/`** — Document ingestion demo: enriches document sections with contextual
+  summaries before storage so later searches return more relevant results.
+- **`claude-prompt-caching-example/`** — Compares two ways of feeding memory into Claude,
+  showing one approach keeps long conversations getting cheaper/faster while the naive approach
+  doesn't.
+- **`openai-agents-sdk/`** — The same "remembers you across sessions" assistant, built on
+  OpenAI's agent framework instead.
+- **`elevenlabs-zep-example/`** — A voice assistant that remembers who you are and prior
+  discussions, with memory lookups happening invisibly so they don't disrupt natural speech.
+
 ## Integrations
 
 Framework integration packages live under [`integrations/`](integrations/), organized
